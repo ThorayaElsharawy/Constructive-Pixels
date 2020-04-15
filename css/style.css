@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #fff; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(7, min-content);
+  grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 13rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end]; }
+
+.footer {
+  background-color: #26313c;
+  padding: 5rem 0;
+  grid-column: full-start / full-end; }
+
+.gallery {
+  background-color: purple;
+  padding: 15rem 0;
+  grid-column: full-start / full-end; }
+
+.header {
+  background-color: #007bff;
+  grid-column: 1 / -1; }
+
+.about {
+  background-color: sandybrown;
+  padding: 15rem 0;
+  grid-column: center-start / center-end; }
+
+.experts {
+  background-color: orange;
+  padding: 15rem 0;
+  grid-column: center-start / center-end; }
+
+.features {
+  background-color: orchid;
+  padding: 15rem 0;
+  grid-column: center-start / center-end; }
+
+.process {
+  background-color: #26313c;
+  padding: 15rem 0;
+  grid-column: full-start / full-end; }
