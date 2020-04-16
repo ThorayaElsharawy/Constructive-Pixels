@@ -19,7 +19,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 100vh repeat(7, min-content);
-  grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 13rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end]; }
 
 .footer {
   background-color: #26313c;
@@ -32,8 +32,9 @@ body {
   grid-column: full-start / full-end; }
 
 .header {
-  background-color: #007bff;
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1;
+  grid-row: 1 / 3;
+  background-color: #007bff; }
 
 .about {
   background-color: sandybrown;
@@ -54,3 +55,94 @@ body {
   background-color: #26313c;
   padding: 15rem 0;
   grid-column: full-start / full-end; }
+
+.navbar {
+  height: 8rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(16, 14rem);
+  align-items: center;
+  position: fixed; }
+
+.logo {
+  grid-column: 3 / 5;
+  display: flex;
+  align-items: center; }
+  .logo__img {
+    width: 4.5rem;
+    height: 4.5rem; }
+  .logo__name {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 400; }
+    .logo__name span {
+      font-size: 2.8rem;
+      margin-left: -2px;
+      color: #24cdd5; }
+      .logo__name span span {
+        font-size: 4rem;
+        margin-left: -6px; }
+
+.nav {
+  grid-column: 7 / 10; }
+  .nav__list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(7rem, min-content));
+    grid-column-gap: 2.5rem;
+    list-style-type: none; }
+  .nav__item {
+    font-size: 1.6rem; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color .3s; }
+  .nav__link--active {
+    border-bottom: 2px solid #24cdd5; }
+  .nav__link:hover {
+    color: #24cdd5; }
+
+.navbar__button {
+  margin-right: 4rem;
+  grid-column: 12 / 13;
+  justify-self: end;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  cursor: pointer; }
+
+.navbar__icon {
+  width: 1.8rem;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  transition: width .4s;
+  position: absolute;
+  right: 0;
+  top: 2rem; }
+
+.navbar__icon::before,
+.navbar__icon::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  transition: width .4s; }
+
+.navbar__icon::before {
+  top: -6px;
+  width: 2.5rem; }
+
+.navbar__icon::after {
+  width: .8rem;
+  top: 6px; }
+
+.navbar__button:hover .navbar__icon {
+  width: 2.5rem; }
+
+.navbar__button:hover .navbar__icon::after {
+  width: 2.5rem; }

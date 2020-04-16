@@ -1,0 +1,137 @@
+.navbar {
+    height: 8rem;
+    width: 100%;
+    // grid-column: center-start / full-end;
+    // grid-row: 1 / 2;
+    // z-index: 5;
+
+    display: grid;
+    grid-template-columns: repeat(16, 14rem);
+    align-items: center;
+
+    position: fixed;
+
+ 
+
+}
+
+.logo {
+    grid-column: 3 / 5;
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    &__name {
+        color: white;
+        font-family: $font-display;
+        font-size: 2rem;
+        font-weight: 400;
+
+        span {
+            font-size: 2.8rem;
+            margin-left: -2px;
+        
+            color: $color-tertiary;
+
+            span {
+                font-size: 4rem;
+                margin-left: -6px;
+
+            }
+        }
+    }
+
+ 
+}
+
+.nav {
+    grid-column: 7 / 10;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(7rem , min-content));
+        grid-column-gap: 2.5rem;
+
+        list-style-type: none;
+    }
+
+    &__item {
+        font-size: 1.6rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+
+        transition: color .3s;
+    }
+
+    &__link--active {
+        border-bottom: 2px solid $color-tertiary;
+    }
+
+    &__link:hover {
+        color: $color-tertiary;
+    }
+  
+}
+
+.navbar__button {
+    margin-right: 4rem;
+    grid-column: 12 / 13;
+    justify-self: end;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.navbar__icon {
+    width: 1.8rem;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: width .4s;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+}
+
+.navbar__icon::before,
+.navbar__icon::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+
+    transition: width .4s;
+
+}
+
+.navbar__icon::before {
+    top: -6px;
+    width: 2.5rem;
+}
+.navbar__icon::after {
+    width: .8rem;
+    top: 6px;
+}
+
+.navbar__button:hover .navbar__icon {
+    width: 2.5rem;
+}
+
+.navbar__button:hover .navbar__icon::after {
+    width: 2.5rem;
+}
+
+
