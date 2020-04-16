@@ -1,6 +1,42 @@
 .header {
     grid-column: 1 / -1;
-    grid-row: 1 / 3;
+    grid-row: 1 / 2;
+    position: relative;
+    z-index: 1;
 
-    background-color: $color-primary;
+
+    background-image: linear-gradient( rgba(0, 0,0 , .6) ,rgba(0, 0,0 , .6)) , url(../img/bg-8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: end;
+
+    font-family: $font-display;
+
+
+    &__title {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }
+
+    &__secondary {
+        font-size: 4.5rem;
+        font-weight: 200;
+    }
+
+    &__primary {
+        font-size: 6rem;
+        font-weight: 700;
+        margin: -2rem 0;
+    }
+
+    &__text {
+        font-size: 2rem;
+        font-weight: 200;
+
+    }
 }
+
