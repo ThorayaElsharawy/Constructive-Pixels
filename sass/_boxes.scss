@@ -5,7 +5,7 @@
     align-self: end;
     transform: translateY(17rem);
     z-index: 10;
-    height: 32rem;
+    height: 33rem;
 
     display: grid;
     grid-template-columns: repeat(3, minmax(10rem, 1fr));
@@ -52,7 +52,7 @@
         }
 
         &-2 {
-            padding: 4rem;
+            padding: 5rem;
             background-image: linear-gradient(to right, #5192e1 0%, #23ced5 100%);
 
            svg {
