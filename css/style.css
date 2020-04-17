@@ -18,7 +18,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh repeat(8, min-content);
+  grid-template-rows: 100vh 44vw repeat(7, min-content);
   grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end]; }
 
 .footer {
@@ -59,9 +59,31 @@ body {
     font-weight: 200; }
 
 .about {
-  padding: 20rem 0;
   grid-column: center-start / center-end;
-  background-color: #fff; }
+  padding-top: 17rem;
+  display: grid;
+  grid-template-columns: minmax(60rem, 1fr) 1fr;
+  grid-column-gap: 3rem;
+  display: grid;
+  align-items: center; }
+  .about__content {
+    color: #000; }
+  .about__header {
+    font-size: 5.5rem;
+    line-height: 1;
+    font-weight: 400;
+    font-family: "Josefin Sans", sans-serif; }
+    .about__header span {
+      color: #e39a56; }
+  .about__text {
+    color: #808080;
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem 0; }
+  .about__picture {
+    display: grid;
+    justify-items: end; }
+    .about__picture .img {
+      height: 25rem; }
 
 .experts {
   background-color: orange;
@@ -81,7 +103,7 @@ body {
 .navbar {
   height: 8rem;
   width: 100%;
-  z-index: 5;
+  z-index: 50;
   display: grid;
   grid-template-columns: repeat(16, 14rem);
   align-items: center;
@@ -102,7 +124,7 @@ body {
     .logo__name span {
       font-size: 2.8rem;
       margin-left: -2px;
-      color: #24cdd5; }
+      color: #e39a56; }
       .logo__name span span {
         font-size: 4rem;
         margin-left: -6px; }
@@ -122,9 +144,9 @@ body {
     font-weight: 500;
     transition: color .3s; }
   .nav__link--active {
-    border-bottom: 2px solid #24cdd5; }
+    border-bottom: 2px solid #e39a56; }
   .nav__link:hover {
-    color: #24cdd5; }
+    color: #e39a56; }
 
 .navbar__button {
   margin-right: 4rem;
@@ -207,7 +229,7 @@ body {
       height: 28rem; }
     .boxes .box-2 {
       padding: 5rem;
-      background-image: linear-gradient(to right, #5192e1 0%, #23ced5 100%); }
+      background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%); }
       .boxes .box-2 svg {
         width: 5rem;
         height: 5rem; }
@@ -215,3 +237,11 @@ body {
       height: 28rem; }
   .boxes .box:hover .box__icon {
     transform: scale(1.2); }
+
+.btn {
+  padding: 1.3rem 4.3rem;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
+  border-radius: 50px;
+  font-size: 1.5rem; }

@@ -3,7 +3,7 @@
     width: 100%;
     // grid-column: center-start / full-end;
     // grid-row: 1 / 2;
-    z-index: 5;
+    z-index: 50;
 
     display: grid;
     grid-template-columns: repeat(16, 14rem);
@@ -35,7 +35,7 @@
             font-size: 2.8rem;
             margin-left: -2px;
         
-            color: $color-tertiary;
+            color: $color-primary;
 
             span {
                 font-size: 4rem;
@@ -72,11 +72,11 @@
     }
 
     &__link--active {
-        border-bottom: 2px solid $color-tertiary;
+        border-bottom: 2px solid $color-primary;
     }
 
     &__link:hover {
-        color: $color-tertiary;
+        color: $color-primary;
     }
   
 }

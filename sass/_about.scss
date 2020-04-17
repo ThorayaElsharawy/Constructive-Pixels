@@ -1,5 +1,45 @@
 .about {
-    padding: 20rem 0;
     grid-column: center-start / center-end;
-    background-color: #fff;
+    padding-top: 17rem;
+    display: grid;
+    grid-template-columns: minmax(60rem, 1fr) 1fr;
+    grid-column-gap: 3rem;
+
+    display: grid;
+    align-items: center;
+
+    &__content {
+        color: #000;
+    }
+
+    &__header {
+        font-size: 5.5rem;
+        line-height: 1;
+        font-weight: 400;
+        font-family: $font-display;
+
+        span {
+            color: $color-primary;
+        }
+    }
+
+    &__text {
+        color: $color-gray;
+        font-size: 1.6rem;
+        margin: 2rem 0 4rem 0;
+    }
+
+    &__picture {
+        // grid-row: 2 / 3;
+        // grid-column: 2 / -1;
+     
+        display: grid;
+        justify-items: end;
+
+        .img {
+            height: 25rem;
+           
+        }
+    }
+
 }
