@@ -1,16 +1,23 @@
+// .about {
+//     background-color: red;
+//     padding: 5rem;
+
+//     grid-column: center-start / center-end;
+// }
+
 .about {
     grid-column: center-start / center-end;
-    padding-top: 17rem;
     display: grid;
     grid-template-columns: minmax(60rem, 1fr) 1fr;
     grid-column-gap: 3rem;
 
+    @media only screen and (max-width: 850px) {
+        grid-template-columns: minmax(20rem, 1fr);
+    }
+
     display: grid;
     align-items: center;
 
-    &__content {
-        color: #000;
-    }
 
     &__header {
         font-size: 5.5rem;
@@ -18,6 +25,10 @@
         font-weight: 400;
         font-family: $font-display;
         color: $color-secondary;
+
+        @media only screen and (max-width: 850px) {
+            line-height: 1.2;
+        }
 
         span {
             color: $color-primary;
@@ -31,11 +42,21 @@
     }
 
     &__picture {
-        // grid-row: 2 / 3;
-        // grid-column: 2 / -1;
+        justify-self: end;
      
         display: grid;
         justify-items: end;
+
+        @media only screen and (max-width: 850px) {
+            grid-row: 1 / -1;
+            margin-bottom: 3rem;
+            justify-self: center;
+     
+            display: grid;
+            justify-items: center;
+        }
+
+
 
         .img {
             height: 25rem;
@@ -44,3 +65,4 @@
     }
 
 }
+
