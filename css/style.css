@@ -110,41 +110,85 @@ body {
   padding: 15rem 0;
   grid-column: center-start / center-end; }
 
-.process {
-  background-color: orangered;
+.process-section {
+  background-color: #26313c;
   grid-column: full-start / full-end;
+  margin-top: 10rem;
+  padding: 10rem 0; }
+
+.process__header {
+  text-align: center;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300; }
+  .process__header h3 {
+    font-size: 2.5rem;
+    font-weight: inherit; }
+  .process__header h1 {
+    font-size: 6rem;
+    font-weight: inherit; }
+
+.processes {
+  padding: 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 10; }
+  .processes .process {
+    display: grid;
+    grid-row-gap: 2rem;
+    padding: 0 3rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: relative; }
+    .processes .process__number {
+      height: 9.5rem;
+      width: 9.5rem;
+      font-size: 2.5rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      background-color: #26313c;
+      justify-self: center;
+      align-self: center;
+      display: grid;
+      align-items: center; }
 
-.item {
-  padding: 20px;
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px; }
+.process--active .process__number {
+  background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
+  box-sizing: content-box;
+  border: none; }
 
-.item--1 {
-  background-color: orangered; }
+.process::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  z-index: -1; }
 
-.item--2 {
-  background-color: blue; }
+.process::after {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  z-index: -1; }
 
-.item--3 {
-  background-color: brown; }
+.process:last-child::after {
+  display: none; }
 
-.item--4 {
-  background-color: yellowgreen; }
-
-.item--5 {
-  background-color: pink; }
-
-.item--6 {
-  background-color: gray; }
-
-.item--7 {
-  background-color: purple; }
-
-.item--8 {
-  background-color: orangered; }
+.process:first-child::before {
+  display: none; }
 
 .navbar {
   grid-column: full-start / full-end;
