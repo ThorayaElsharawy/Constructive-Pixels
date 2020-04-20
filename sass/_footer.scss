@@ -1,12 +1,19 @@
 .footer {
     background-color: $color-secondary;
     padding: 5rem 14rem;
-
     grid-column: full-start / full-end;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(27rem, 1fr));
     grid-gap: 3rem;
+    grid-row-gap: 5rem;
+
+    @media only screen and (max-width: 1400px) {
+        padding: 5rem 10rem;
+    }
+    @media only screen and (max-width: 1270px) {
+        padding: 5rem 5rem;
+    }
 
     &__header {
         font-size: 2.5rem;
@@ -105,7 +112,7 @@
         background-color: $color-twitter;
     }
     &__item-icon-3::after {
-        background-color: $color-facebook;
+        background-color: $color-linkedin;
     }
     &__item-icon-4::after {
         background-image: $color-instagram;
@@ -162,6 +169,11 @@
         display: grid;
         grid-row-gap: 2rem;
         justify-self: center;
+
+        @media only screen and (max-width: 740px) {
+            justify-self: start;
+
+        }
 
         font-weight: 400;
 

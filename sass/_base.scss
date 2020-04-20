@@ -1,6 +1,6 @@
 // COLOR VARIABLES
 $color-primary: #e39a56;
-// $color-primary-light: ;
+$color-primary-light: #fecc9e;
 $color-primary-dark: rgb(136, 116, 93);
 
 $color-secondary: #26313c;
@@ -16,14 +16,19 @@ $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
 
 $color-facebook: #4267B2;
-$color-twitter: rgba(3, 169, 245, 0.5) ;
-$color-instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
-
+$color-linkedin: rgba(3, 169, 245, 0.5) ;
+$color-instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+$color-twitter:#24cdd5;
 
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
 
 *,
 *::after,
