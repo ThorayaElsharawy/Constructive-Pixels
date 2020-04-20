@@ -351,9 +351,76 @@ body {
   grid-column: center-start / center-end; }
 
 .features {
-  background-color: orchid;
-  padding: 15rem 0;
-  grid-column: center-start / center-end; }
+  margin: 7rem 0;
+  padding: 5rem 0;
+  grid-column: center-start / center-end;
+  color: #26313c; }
+  .features__title {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center; }
+  .features__header h5 {
+    font-size: 2rem;
+    color: #e39a56;
+    font-weight: 400; }
+  .features__header h1 {
+    margin-top: -1rem;
+    font-size: 5.5rem;
+    font-weight: 300; }
+  .features__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+    margin-top: 4rem; }
+  .features__text {
+    font-size: 1.4rem;
+    color: #808080;
+    padding: 0 2rem; }
+  .features__items {
+    color: #808080;
+    padding: 5rem 0; }
+    .features__items-1, .features__items-3 {
+      display: grid;
+      grid-row-gap: 5rem; }
+  .features .theme,
+  .features .customization {
+    display: grid;
+    justify-items: end;
+    grid-row-gap: 1rem; }
+  .features .code,
+  .features .documentation {
+    display: grid;
+    grid-row-gap: 1rem; }
+  .features__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: #e39a56; }
+  .features__header {
+    font-size: 2.2rem;
+    font-weight: 400; }
+  .features__text--right {
+    text-align: right;
+    font-size: 1.4rem;
+    color: #808080; }
+  .features__text--left {
+    text-align: left;
+    font-size: 1.4rem;
+    color: #808080; }
+  .features__item-2 {
+    background-image: url(../img/iphone.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative; }
+  .features__img-page {
+    width: 52%;
+    height: 95%;
+    position: absolute;
+    top: 1rem;
+    left: 8.6rem;
+    border-radius: 20px; }
 
 .process-section {
   background-color: #26313c;
