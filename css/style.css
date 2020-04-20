@@ -26,8 +26,149 @@ body {
 
 .footer {
   background-color: #26313c;
-  padding: 5rem 0;
-  grid-column: full-start / full-end; }
+  padding: 5rem 14rem;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem; }
+  .footer__header {
+    font-size: 2.5rem;
+    font-family: "Josefin Sans", sans-serif; }
+  .footer__logo {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400; }
+    .footer__logo span {
+      font-size: 3rem;
+      margin-left: -2px;
+      color: #e39a56; }
+  .footer__company {
+    display: grid;
+    grid-row-gap: 2rem;
+    font-weight: 400; }
+  .footer__desc {
+    font-size: 1.5rem; }
+  .footer__contacts {
+    display: flex;
+    align-items: center; }
+  .footer__icon-mobi {
+    width: 4rem;
+    height: 4rem;
+    fill: #fff;
+    margin-left: -.5rem; }
+  .footer__list-icons {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 4rem); }
+  .footer__item-icon {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: .5rem;
+    cursor: pointer;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10; }
+  .footer__item-icon:hover {
+    border: 1px solid transparent; }
+  .footer__item-icon::after {
+    content: "";
+    display: block;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    transition: all .4s; }
+  .footer__item-icon-1::after {
+    background-color: #4267B2; }
+  .footer__item-icon-2::after {
+    background-color: rgba(3, 169, 245, 0.5); }
+  .footer__item-icon-3::after {
+    background-color: #4267B2; }
+  .footer__item-icon-4::after {
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; }
+  .footer__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #fff; }
+  .footer__item-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); }
+  .footer__news {
+    display: grid;
+    grid-row-gap: 2rem;
+    font-weight: 400; }
+    .footer__news-list {
+      list-style-type: none;
+      font-size: 1.5rem;
+      display: grid;
+      grid-row-gap: 2rem; }
+    .footer__news-item {
+      border-bottom: 1px solid #808080; }
+      .footer__news-item p:last-child {
+        color: #e39a56;
+        font-size: 1.3rem;
+        font-weight: 300; }
+  .footer__services {
+    display: grid;
+    grid-row-gap: 2rem;
+    justify-self: center;
+    font-weight: 400; }
+    .footer__services-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer; }
+    .footer__services-item::before {
+      content: "";
+      display: inline-block;
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-right: .7rem;
+      background-color: #e39a56;
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+      background-image: none; }
+    .footer__services-link:link, .footer__services-link:visited {
+      color: #fff;
+      text-decoration: none;
+      transition: all .4s; }
+      .footer__services-link:link:hover, .footer__services-link:visited:hover {
+        color: #e39a56;
+        margin-left: 5px; }
+    .footer__services-list {
+      list-style-type: none;
+      display: grid;
+      grid-row-gap: .9rem;
+      font-size: 1.5rem; }
+  .footer__business {
+    display: grid;
+    grid-row-gap: 2rem;
+    font-weight: 400; }
+    .footer__business-text {
+      font-size: 1.6rem; }
+    .footer__business-list {
+      list-style-type: none;
+      font-size: 1.5rem;
+      display: grid;
+      grid-row-gap: 1rem; }
+    .footer__business .dashed::before {
+      content: "";
+      display: inline-block;
+      border-bottom: 1px dashed #fff;
+      width: 8rem;
+      margin: 0 5px; }
 
 .gallery {
   background-color: #fff;

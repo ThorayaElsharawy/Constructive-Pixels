@@ -1,5 +1,248 @@
 .footer {
     background-color: $color-secondary;
-    padding: 5rem 0;
+    padding: 5rem 14rem;
+
     grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+
+    &__header {
+        font-size: 2.5rem;
+        font-family: $font-display;
+    }
+
+    &__logo {
+        color: white;
+        font-family: $font-display;
+        font-size: 2.5rem;
+        font-weight: 400;
+    
+        span {
+            font-size: 3rem;
+            margin-left: -2px;
+            color: $color-primary;
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////Company
+    &__company {
+
+        display: grid;
+        grid-row-gap: 2rem; 
+        
+        font-weight: 400;
+
+    }
+
+    &__desc {
+        font-size: 1.5rem;
+    }
+
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+    }
+ 
+     &__icon-mobi {
+        width: 4rem;
+        height: 4rem;
+        fill: #fff;
+        margin-left: -.5rem;
+    }
+ 
+     &__list-icons {
+        list-style-type: none;
+
+        display: grid;
+        grid-template-columns: repeat(4, 4rem);
+    }
+
+
+    // icon Funcationality
+    &__item-icon {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        padding: .5rem;
+        cursor: pointer;
+        box-sizing: content-box;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item-icon:hover {
+        border: 1px solid transparent;
+    }
+
+    &__item-icon::after {
+        content: "";
+        display: block;
+        width: 3.1rem;
+        height: 3.1rem;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(.5);
+
+        transition: all .4s;
+    }
+
+    &__item-icon-1::after {
+        background-color: $color-facebook;
+    }
+    &__item-icon-2::after {
+        background-color: $color-twitter;
+    }
+    &__item-icon-3::after {
+        background-color: $color-facebook;
+    }
+    &__item-icon-4::after {
+        background-image: $color-instagram;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: #fff;
+
+    }
+
+    &__item-icon:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+  
+
+    //////////////////////////////////////////////////////////News
+    &__news {
+
+        display: grid;
+        grid-row-gap: 2rem;
+    
+        font-weight: 400;
+
+        &-list {
+            list-style-type: none;
+            font-size: 1.5rem;
+
+            display: grid;
+            grid-row-gap: 2rem;
+ 
+        }
+
+        &-item {
+            border-bottom: 1px solid $color-gray;
+
+            p:last-child {
+                color: $color-primary;
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+
+    //////////////////////////////////////////////////////////Services
+
+
+    &__services {
+        display: grid;
+        grid-row-gap: 2rem;
+        justify-self: center;
+
+        font-weight: 400;
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            cursor: pointer;
+        }
+
+        &-item::before {
+            content: "";
+            display: inline-block;
+            width: 1.1rem;
+            height: 1.1rem;
+
+            margin-right: .7rem;
+            background-color: $color-primary;
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+
+          
+        }
+
+        &-link:link,
+        &-link:visited {
+            color: #fff;
+            text-decoration: none;
+            transition: all .4s;
+
+            &:hover {
+                color: $color-primary;
+                margin-left: 5px;
+            }
+        }
+
+        &-list {
+            list-style-type: none;
+            display: grid;
+            grid-row-gap: .9rem;
+            font-size: 1.5rem; 
+        }
+
+    
+    }
+
+
+    //////////////////////////////////////////////////////////Business
+
+
+
+    &__business {
+        display: grid;
+        grid-row-gap: 2rem;
+
+        font-weight: 400;
+
+        &-text {
+            font-size: 1.6rem;
+        }
+
+        &-list {
+            list-style-type: none;
+            font-size: 1.5rem;
+
+            display: grid;
+            grid-row-gap: 1rem;
+ 
+        }
+
+        .dashed::before {
+            content: "";
+            display: inline-block;
+            border-bottom: 1px dashed #fff;
+            width: 8rem;
+            margin: 0 5px;
+        }
+
+    
+    }
 }
