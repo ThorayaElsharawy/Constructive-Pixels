@@ -59,7 +59,7 @@ body {
     grid-row-gap: 2rem;
     font-weight: 400; }
   .footer__desc {
-    font-size: 1.5rem; }
+    font-size: 1.3rem; }
   .footer__contacts {
     display: flex;
     align-items: center; }
@@ -121,14 +121,14 @@ body {
     font-weight: 400; }
     .footer__news-list {
       list-style-type: none;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       display: grid;
       grid-row-gap: 2rem; }
     .footer__news-item {
       border-bottom: 1px solid #808080; }
       .footer__news-item p:last-child {
         color: #e39a56;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 300; }
   .footer__services {
     display: grid;
@@ -165,24 +165,32 @@ body {
       list-style-type: none;
       display: grid;
       grid-row-gap: .9rem;
-      font-size: 1.5rem; }
+      font-size: 1.3rem; }
   .footer__business {
     display: grid;
     grid-row-gap: 2rem;
     font-weight: 400; }
     .footer__business-text {
-      font-size: 1.6rem; }
+      font-size: 1.3rem; }
     .footer__business-list {
       list-style-type: none;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       display: grid;
       grid-row-gap: 1rem; }
     .footer__business .dashed::before {
       content: "";
       display: inline-block;
       border-bottom: 1px dashed #fff;
-      width: 8rem;
+      width: 10%;
       margin: 0 5px; }
+
+.footer__business-item {
+  display: flex;
+  align-items: center; }
+
+.footer__business-item .dots {
+  border-bottom: 1px dotted #fff;
+  flex: 1; }
 
 .gallery {
   background-color: #fff;

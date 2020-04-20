@@ -44,7 +44,7 @@
     }
 
     &__desc {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
 
@@ -143,7 +143,7 @@
 
         &-list {
             list-style-type: none;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
 
             display: grid;
             grid-row-gap: 2rem;
@@ -155,7 +155,7 @@
 
             p:last-child {
                 color: $color-primary;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 font-weight: 300;
             }
         }
@@ -217,7 +217,7 @@
             list-style-type: none;
             display: grid;
             grid-row-gap: .9rem;
-            font-size: 1.5rem; 
+            font-size: 1.3rem; 
         }
 
     
@@ -235,12 +235,12 @@
         font-weight: 400;
 
         &-text {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
 
         &-list {
             list-style-type: none;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
 
             display: grid;
             grid-row-gap: 1rem;
@@ -251,10 +251,20 @@
             content: "";
             display: inline-block;
             border-bottom: 1px dashed #fff;
-            width: 8rem;
+            width: 10%;
             margin: 0 5px;
         }
 
     
     }
 }
+
+.footer__business-item {
+    display: flex;
+    align-items: center;
+  }
+  
+.footer__business-item .dots {
+    border-bottom: 1px dotted #fff;
+    flex: 1;
+  }
