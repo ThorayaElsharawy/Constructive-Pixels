@@ -1,0 +1,42 @@
+.counters {
+    background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
+    grid-column: 1 / -1;
+    padding: 10rem 0;
+    margin: 6rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-items: center;
+    grid-row-gap: 4rem;
+
+    .counter {
+        text-align: center;
+    
+        &__icon {
+            width: 8rem;
+            height: 8rem;
+            fill: #fff;
+            font-weight: 300;
+        }
+
+        &__num {
+            font-size: 6rem;
+            font-family: "Playfair Display",Arial,Helvetica,sans-serif;
+            // display: flex;
+
+            span {
+                margin-left: -2rem;
+                // margin-top:1rem ;
+                font-size: 6rem;
+                font-family: inherit;
+            }
+        }
+
+        &__heading {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-top: -1rem;
+        }
+    }
+}

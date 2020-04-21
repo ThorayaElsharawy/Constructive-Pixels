@@ -25,7 +25,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh repeat(8, min-content);
+  grid-template-rows: 100vh repeat(9, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .footer {
@@ -771,3 +771,32 @@ body {
   background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
   border-radius: 50px;
   font-size: 1.5rem; }
+
+.counters {
+  background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
+  grid-column: 1 / -1;
+  padding: 10rem 0;
+  margin: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-items: center;
+  grid-row-gap: 4rem; }
+  .counters .counter {
+    text-align: center; }
+    .counters .counter__icon {
+      width: 8rem;
+      height: 8rem;
+      fill: #fff;
+      font-weight: 300; }
+    .counters .counter__num {
+      font-size: 6rem;
+      font-family: "Playfair Display",Arial,Helvetica,sans-serif; }
+      .counters .counter__num span {
+        margin-left: -2rem;
+        font-size: 6rem;
+        font-family: inherit; }
+    .counters .counter__heading {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-top: -1rem; }
