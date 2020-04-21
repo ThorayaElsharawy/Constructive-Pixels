@@ -1,6 +1,195 @@
 .experts {
-    background-color: orange;
-
-    padding: 15rem 0;
+    margin: 7rem 0;
     grid-column: center-start / center-end;
+    color: $color-secondary;
+
+    &__title {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+        grid-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__header {
+        h5 {
+            font-size: 1.8rem;
+            color: $color-primary;
+            font-weight: 400;
+        }
+
+        h1 {
+            margin-top: -1rem;;
+            font-size: 5rem;
+            font-weight: 300;
+        }
+    }
+
+      &__text {
+        font-size: 1.4rem;
+        color: $color-gray;
+        padding: 0 2rem;
+    }
+
+
+    /////////////////////////////////////////////////Content
+    &__content {
+        margin-top: 8rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-row-gap: 2rem;
+    }
+
+    &__team-box {
+        background-color: #fffaf5;
+        height: 38rem;
+        // background-color: $color-secondary;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 25rem min-content min-content;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__team-img {
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        object-fit: cover;
+        transition: all 2s;
+    }
+
+    &__team-box::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        z-index: -1;
+        background-color: $color-primary;
+        cursor: pointer;
+
+        transform: scaleX(0);
+        transition: transform .6s ease-in-out;
+    }
+
+    &__team-box:hover::after{
+        transform: scaleX(-1);
+        height: 34.4%;
+    }
+
+    &__team-box:hover &__team-name ,
+    &__team-box:hover &__team-job {
+        color: #fff;
+    }
+
+    &__team-box:hover &__icon {
+        fill: #fff;
+    }
+
+    &__team-name {
+        grid-column: 1 / -1;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+
+    &__team-job {
+        grid-column: 1 / -1;
+        // padding: 0 3rem 3rem 3rem;
+        font-size: 1.4rem;
+        color: $color-gray;
+    }
+
+    &__team-social {
+        grid-column: 1 / -1;
+        justify-self: center;
+        color: $color-secondary;
+        margin-top: 1rem;
+
+        position: relative;
+        z-index: 10;
+
+    }
+
+
+    /////////////////////////////////////Social icons
+
+    &__list-icons {
+        list-style-type: none;
+
+        display: grid;
+        grid-template-columns: repeat(4, 4rem);
+    }
+
+
+    // icon Funcationality
+    &__item-icon {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        padding: .5rem;
+        cursor: pointer;
+        box-sizing: content-box;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item-icon:hover {
+        border: 1px solid transparent;
+    }
+
+    &__item-icon::after {
+        content: "";
+        display: block;
+        width: 3.1rem;
+        height: 3.1rem;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(.5);
+
+        transition: all .4s;
+    }
+
+    &__item-icon-1::after {
+        background-color: $color-facebook;
+    }
+    &__item-icon-2::after {
+        background-color: $color-twitter;
+    }
+    &__item-icon-3::after {
+        background-color: $color-linkedin;
+    }
+    &__item-icon-4::after {
+        background-image: $color-instagram;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $color-primary;
+    }
+
+    &__item-icon:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    &__item-icon:hover &__icon {
+        fill: #fff !important;
+    }
 }
