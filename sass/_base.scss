@@ -22,6 +22,18 @@ $color-instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #f
 $color-twitter:#24cdd5;
 
 
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;

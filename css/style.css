@@ -1,3 +1,11 @@
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 ::selection {
   background-color: #e39a56;
   color: #fff; }
@@ -640,6 +648,7 @@ body {
   background-color: transparent;
   width: 100%;
   z-index: 50;
+  padding: 2px 0;
   display: grid;
   grid-template-columns: minmax(4rem, 28rem) repeat(8, minmax(min-content, 14rem));
   align-items: center;
@@ -724,6 +733,21 @@ body {
 
 .navbar__button:hover .navbar__icon::after {
   width: 2.5rem; }
+
+.navbar.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
+  animation: moveInTop .7s ease-in-out;
+  box-sizing: content-box;
+  animation-fill-mode: both; }
+  .navbar.scrolled .logo,
+  .navbar.scrolled .nav__link {
+    color: #26313c; }
+  .navbar.scrolled .navbar__icon,
+  .navbar.scrolled .navbar__icon::before,
+  .navbar.scrolled .navbar__icon::after {
+    background-color: #26313c; }
 
 .boxes {
   grid-column: center-start / center-end;

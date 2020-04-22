@@ -3,7 +3,7 @@
     background-color: transparent;
     width: 100%;
     z-index: 50;
-
+    padding: 2px 0;
     display: grid;
     grid-template-columns: minmax(4rem, 28rem) repeat(8, minmax(min-content, 14rem)) ;
     align-items: center;
@@ -128,3 +128,23 @@
 }
 
 
+.navbar.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+    // border-bottom: 3px solid rgba($color-primary, .6);
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
+    animation: moveInTop .7s ease-in-out;
+    box-sizing: content-box;
+    animation-fill-mode: both;
+
+    .logo,
+    .nav__link {
+        color: $color-secondary;   
+    }
+    .navbar__icon,
+    .navbar__icon::before,
+     .navbar__icon::after {
+        background-color: $color-secondary;
+
+    }    
+}
