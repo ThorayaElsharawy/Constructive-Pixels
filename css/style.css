@@ -978,11 +978,13 @@ body {
   background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
   grid-column: 1 / -1;
   padding: 10rem 0;
-  margin: 6rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  justify-items: center;
-  grid-row-gap: 4rem; }
+  margin: 6rem 0; }
+  @supports (display: grid) {
+    .counters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      justify-items: center;
+      grid-row-gap: 4rem; } }
   .counters .counter {
     text-align: center; }
     .counters .counter__icon {
