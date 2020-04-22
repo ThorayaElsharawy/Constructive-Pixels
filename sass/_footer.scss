@@ -8,11 +8,18 @@
     grid-gap: 3rem;
     grid-row-gap: 5rem;
 
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: 1550px) {
         padding: 5rem 10rem;
+        grid-column-gap: 1.5rem;
+
     }
-    @media only screen and (max-width: 1270px) {
-        padding: 5rem 5rem;
+
+    @media only screen and(max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and(max-width: 707px) {
+        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     }
 
     &__header {
@@ -170,7 +177,7 @@
         grid-row-gap: 2rem;
         justify-self: center;
 
-        @media only screen and (max-width: 740px) {
+        @media only screen and (max-width: 1039px) {
             justify-self: start;
 
         }
@@ -180,8 +187,9 @@
         &-item {
             display: flex;
             align-items: center;
-
             cursor: pointer;
+
+    
         }
 
         &-item::before {

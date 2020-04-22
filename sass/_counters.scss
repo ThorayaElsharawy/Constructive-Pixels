@@ -9,6 +9,8 @@
     justify-items: center;
     grid-row-gap: 4rem;
 
+  
+
     .counter {
         text-align: center;
     
@@ -17,18 +19,35 @@
             height: 8rem;
             fill: #fff;
             font-weight: 300;
+
+            @media only screen and (max-width: 900px) {
+                width: 6rem;
+                height: 6rem;
+                        
+            }
+
+
         }
 
         &__num {
             font-size: 6rem;
             font-family: "Playfair Display",Arial,Helvetica,sans-serif;
-            // display: flex;
+
+            @media only screen and (max-width: 707px) {
+                font-size: 4.5rem;
+            }
 
             span {
                 margin-left: -2rem;
                 // margin-top:1rem ;
                 font-size: 6rem;
                 font-family: inherit;
+
+                @media only screen and (max-width: 707px) {
+                    font-size: 4.5rem;
+                    margin-left: -1rem;
+
+                }
             }
         }
 

@@ -8,15 +8,25 @@
 .about {
     grid-column: center-start / center-end;
     display: grid;
-    grid-template-columns: minmax(60rem, 1fr) 1fr;
+    grid-template-columns: minmax(55rem, 1fr) minmax(25rem, 1fr);
     grid-column-gap: 3rem;
+    align-items: center;
 
-    @media only screen and (max-width: 850px) {
-        grid-template-columns: minmax(20rem, 1fr);
+
+    @media only screen and (max-width: 950px) {
+        grid-template-columns: minmax(40rem, 1fr) min-content;
+
     }
 
-    display: grid;
-    align-items: center;
+    @media only screen and (max-width: 850px) {
+        grid-template-columns: 1fr;
+        margin-top: -7rem;
+    }
+
+    @media only screen and (max-width: 707px) {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
 
 
     &__header {
@@ -28,6 +38,11 @@
 
         @media only screen and (max-width: 850px) {
             line-height: 1.2;
+            font-size: 4rem;
+
+        }
+
+        @media only screen and (max-width: 450px) {
         }
 
         span {
@@ -59,7 +74,12 @@
 
 
         .img {
-            height: 25rem;
+            height: 24rem;
+
+            @media only screen and (max-width: 850px) {
+                height: 19rem;
+
+            }
            
         }
     }
