@@ -34,7 +34,6 @@
 
     .box {
         // grid-row: 1 / -1;
-        background-color: $color-secondary;
         display: grid;
         grid-gap: 2.2rem;
         padding: 4rem 3rem;
@@ -69,6 +68,8 @@
         &-1, &-3
          {
             height: 30rem;
+            background-color: $color-secondary;
+
 
             @media only screen and (max-width: 850px) {
                 height: 20rem;
@@ -78,7 +79,7 @@
         &-2 {
             padding: 4rem;
             height: 33rem;
-            background-image: linear-gradient(to right, $color-primary-dark 0%,  $color-primary-dark 1%, $color-primary 65%);
+            background-image: $color-bg-primary;
 
             @media only screen and (max-width: 850px) {
                 height: 20rem;

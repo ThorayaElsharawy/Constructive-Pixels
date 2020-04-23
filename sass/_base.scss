@@ -16,6 +16,8 @@ $color-gray: #808080;
 $color-grey-light-1: #f6f7f8;
 $color-grey-light-2: #aaa;
 
+$color-bg-primary: linear-gradient(to right, $color-primary-dark 0%,  $color-primary-dark 1%, $color-primary 65%);
+
 //COLOR SOCIAL MEDIA
 
 $color-facebook: #4267B2;
@@ -27,13 +29,26 @@ $color-twitter:#24cdd5;
 @keyframes moveInTop {
     0% {
         opacity: 0;
-        transform: translate3d(0, -100%, 0);
+        transform: translateY(1px);
     }
     100% {
         opacity: 1;
         transform: translate(0);
     }
 }
+
+
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
 
 
 // FONT VARIABLES
@@ -64,8 +79,6 @@ body {
     font-weight: 300;
     line-height: 1.6;
     color: #fff;
-    -webkit-scrollbar-color: red;
-    scrollbar-color: red;
 }
 
 .container {

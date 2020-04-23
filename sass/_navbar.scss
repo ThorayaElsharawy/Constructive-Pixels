@@ -13,8 +13,62 @@
     @media only screen and (max-width: 70rem) {
         padding: 1rem 0;
     }
-}
 
+    ////////////////////////////////////////////////////////////
+    &__checkbox {
+        display: none;
+    }
+
+    &__background {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 35%;
+        height: 100vh;
+        background-image: $color-bg-primary;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 50;
+        
+
+        @media only screen and (max-width: 778px) {
+            width: 47%;
+        }
+
+        @media only screen and (max-width: 450px) {
+            width: 100%;
+        }
+    }
+
+    //FUNCTIONALITY
+
+    &__checkbox:checked {
+        body {
+            overflow: hidden;
+            position: fixed;
+        }
+    }
+
+    &__checkbox:checked ~ &__background {
+        opacity: 1;
+        visibility: visible;
+
+        animation: moveInRight .4s ease-in-out;
+        animation-fill-mode: both;
+
+    }
+
+    &__checkbox:checked ~ .sidebar {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__checkbox:checked ~ .nav {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+///////////////////////////////////////////////
 .logo {
     grid-column: 2 / span 2;
 
@@ -122,32 +176,88 @@
     top: 6px;
 }
 
-.navbar__button:hover .navbar__icon {
+.navbar__button:hover .navbar__icon,
+.navbar__button:hover .navbar__icon::after  {
     width: 2.5rem;
 }
 
-.navbar__button:hover .navbar__icon::after {
-    width: 2.5rem;
-}
+// .navbar__button:hover .navbar__icon::after {
+//     width: 2.5rem;
+// }
 
-
+////////////////////////////////////////////////
 .navbar.scrolled {
     background-color: #fff !important;
-    transition: background-color 200ms linear;
-    // border-bottom: 3px solid rgba($color-primary, .6);
+    // transition: background-color 200ms linear;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
-    animation: moveInTop .7s ease-in-out;
     box-sizing: content-box;
-    animation-fill-mode: both;
+
+    animation: moveInTop .7s ease-in-out;
+    // animation-fill-mode: both;
 
     .logo,
-    .nav__link {
+    .nav__link-scroll {
         color: $color-secondary;   
     }
     .navbar__icon,
     .navbar__icon::before,
      .navbar__icon::after {
         background-color: $color-secondary;
+    } 
 
-    }    
+}
+
+    /////////////////////////////
+    // Sidebar
+.sidebar {
+    grid-column: 1 / -1;
+    height: 100vh;
+    position: fixed;
+    top: 15vw;
+    right: 20vw;
+    // transform: translate(15vw, 13vw);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s cubic-bezier(0.68, -.55, 0.265, 1.55) .1s;
+    z-index: 60;
+
+    @media only screen and (max-width: 450px) {
+        top: 40%;
+        left: 40%;
+        transform: translate(-20%, -20%);
+
+    }
+
+
+    .nav__list {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+        padding: 2rem;
+    }
+
+    .nav__item {
+        font-size: 2rem;
+
+        @media only screen and (max-width: 950px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    .nav__link:hover {
+        color: #fff;
+    }
+}
+
+.close__icon {
+    fill: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: 4rem;
+    left: 90%;
+}
+
+body.nave-opened {
+    height: 100vh;
+    overflow-y: hidden;
 }

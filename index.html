@@ -23,8 +23,35 @@
         
         <div class="navbar">
             <h1 class="logo">constructive<span>Pixel <span>.</span></span></h1>
-
+            
             <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link nav__link--active nav__link-scroll">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link-scroll">AboutUs</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link-scroll">Features</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link-scroll">OurExperts</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link-scroll">OurService</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link-scroll">Gallery</a></li>
+                </ul>
+            </nav>
+
+            <input class="navbar__checkbox" type="checkbox" id="navi-toggle">
+
+            <label class="navbar__button" for="navi-toggle">
+                <span class="navbar__icon">&nbsp;</span>
+            </label>
+    
+            <div class="navbar__background">
+                <input class="navbar__checkbox" type="checkbox" id="navi-toggle1">
+
+                <label class="navbar__button" for="navi-toggle">
+                    <svg class="close__icon">
+                        <use xlink:href="img/sprite.svg#icon-circle-with-cross"></use>
+                    </svg>
+                </label>
+            </div>
+
+            <nav class="sidebar">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#" class="nav__link nav__link--active">Home</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">AboutUs</a></li>
@@ -35,11 +62,8 @@
                 </ul>
             </nav>
 
-            <div class="navbar__button">
-                <span class="navbar__icon"></span>
-            </div>
-
         </div>
+
 
         <header class="header">
             <div class="header__title">
@@ -573,6 +597,10 @@
                 var $nav = $(".navbar");
                 var $header = $(".header__title");
                 $nav.toggleClass('scrolled', $(this).scrollTop() > $header.height());
+            });
+
+            $('#navi-toggle').on('click', function(){
+                $('body').toggleClass('nave-opened');
             });
         });
     </script>

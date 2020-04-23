@@ -98,7 +98,7 @@
 
 .process--active {
     .process__number { 
-        background-image: linear-gradient(to right, $color-primary-dark 0%,  $color-primary-dark 1%, $color-primary 65%);
+        background-image: $color-bg-primary;
         box-sizing: content-box;
         border: none;
     }
