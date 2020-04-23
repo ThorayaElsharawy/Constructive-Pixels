@@ -26,12 +26,31 @@ body {
   color: #6D5D4B;
   font-weight: 300;
   line-height: 1.6;
-  color: #fff; }
+  color: #fff;
+  -webkit-scrollbar-color: red;
+  scrollbar-color: red; }
 
 .container {
   display: grid;
   grid-template-rows: 100vh repeat(9, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+html {
+  --scrollbarBG: #CFD8DC;
+  --thumbBG: #90A4AE; }
+
+body::-webkit-scrollbar {
+  width: 8px; }
+
+body {
+  scrollbar-width: thin; }
+
+body::-webkit-scrollbar-track {
+  background: #6c757d; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e39a56;
+  border-radius: 6px; }
 
 .footer {
   background-color: #26313c;
@@ -975,7 +994,10 @@ body {
   font-size: 1.5rem; }
 
 .counters {
-  background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
+  background-image: linear-gradient(to right, rgba(227, 154, 86, 0.92) 0%, rgba(227, 154, 86, 0.92) 70%), url(../img/bg-9.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
   grid-column: 1 / -1;
   padding: 10rem 0;
   margin: 6rem 0; }
@@ -986,7 +1008,8 @@ body {
       justify-items: center;
       grid-row-gap: 4rem; } }
   .counters .counter {
-    text-align: center; }
+    text-align: center;
+    color: #fff; }
     .counters .counter__icon {
       width: 8rem;
       height: 8rem;

@@ -1,5 +1,11 @@
 .counters {
-    background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
+    // background-image: ;
+    background-image:linear-gradient(to right, rgba($color-primary, .92) 0%,
+                                               rgba($color-primary, .92) 70%),
+                                               url(../img/bg-9.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     grid-column: 1 / -1;
     padding: 10rem 0;
     margin: 6rem 0;
@@ -15,7 +21,7 @@
 
     .counter {
         text-align: center;
-    
+        color: #fff;
         &__icon {
             width: 8rem;
             height: 8rem;
