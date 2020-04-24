@@ -1036,7 +1036,16 @@ body.nave-opened {
   color: #fff;
   background-image: linear-gradient(to right, #88745d 0%, #88745d 1%, #e39a56 65%);
   border-radius: 50px;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  transition: all .3s; }
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+  .btn:hover {
+    transform: translateY(-3px); }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); }
 
 .counters {
   background-image: linear-gradient(to right, rgba(227, 154, 86, 0.92) 0%, rgba(227, 154, 86, 0.92) 70%), url(../img/bg-9.jpg);
