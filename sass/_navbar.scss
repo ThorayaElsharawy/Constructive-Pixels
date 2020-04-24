@@ -23,24 +23,18 @@
         position: fixed;
         top: 0;
         right: 0;
-        width: 35%;
+        width: 0;
         height: 100vh;
         background-image: $color-bg-primary;
         opacity: 0;
         visibility: hidden;
         z-index: 50;
-        
-
-        @media only screen and (max-width: 778px) {
-            width: 47%;
-        }
-
-        @media only screen and (max-width: 450px) {
-            width: 100%;
-        }
+       
+        transition: all .7s;
+  
     }
 
-    //FUNCTIONALITY
+    //FUNCTIONALITY OF ICON
 
     &__checkbox:checked {
         body {
@@ -52,13 +46,23 @@
     &__checkbox:checked ~ &__background {
         opacity: 1;
         visibility: visible;
+        width: 35%;
 
-        animation: moveInRight .4s ease-in-out;
-        animation-fill-mode: both;
+        @media only screen and (max-width: 1039px) {
+            width: 38%;
 
+        }
+
+        @media only screen and (max-width: 778px) {
+            width: 47%;
+        }
+
+        @media only screen and (max-width: 450px) {
+            width: 100%;
+        }
     }
 
-    &__checkbox:checked ~ .sidebar {
+    &__checkbox:checked ~ .sidebar{
         opacity: 1;
         visibility: visible;
     }
@@ -67,8 +71,19 @@
         opacity: 0;
         visibility: hidden;
     }
+
+    &__checkbox:checked ~ .sidebar__contact {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__checkbox:checked ~ &__background   .sidebar{
+        opacity: 1;
+        visibility: visible;
+    }
+    
 }
-///////////////////////////////////////////////
+/////////////////////////////////////////////// NAVBAR
 .logo {
     grid-column: 2 / span 2;
 
@@ -153,6 +168,14 @@
     top: 2rem;
 }
 
+.navbar__icon:focus {
+    outline: none;
+}
+
+.navbar__icon:active {
+    outline: none;
+}
+
 .navbar__icon::before,
 .navbar__icon::after {
     content: "";
@@ -181,19 +204,15 @@
     width: 2.5rem;
 }
 
-// .navbar__button:hover .navbar__icon::after {
-//     width: 2.5rem;
-// }
-
-////////////////////////////////////////////////
+//////////////////////////////////////////////// SCROLLED NAVBAR
 .navbar.scrolled {
     background-color: #fff !important;
-    // transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
     box-sizing: content-box;
 
     animation: moveInTop .7s ease-in-out;
-    // animation-fill-mode: both;
+    animation-fill-mode: both;
 
     .logo,
     .nav__link-scroll {
@@ -207,39 +226,36 @@
 
 }
 
-    /////////////////////////////
-    // Sidebar
+/////////////////////////////SIDBAR
 .sidebar {
+    padding: 15rem 6rem;
     grid-column: 1 / -1;
     height: 100vh;
-    position: fixed;
-    top: 15vw;
-    right: 20vw;
-    // transform: translate(15vw, 13vw);
     opacity: 0;
     visibility: hidden;
-    transition: opacity .8s cubic-bezier(0.68, -.55, 0.265, 1.55) .1s;
+    transition: opacity .9s cubic-bezier(0.68, -.55, 0.265, 1.55) .1s;
     z-index: 60;
 
     @media only screen and (max-width: 450px) {
-        top: 40%;
-        left: 40%;
-        transform: translate(-20%, -20%);
-
+        text-align: center;
+        display: grid;
+        justify-items: center;
+    }
+    
+    .nav__link--active {
+        border-bottom: 2px solid #fff;
     }
 
-
     .nav__list {
-        grid-template-columns: 1fr;
+        grid-template-columns: min-content;
         grid-row-gap: 3rem;
-        padding: 2rem;
     }
 
     .nav__item {
-        font-size: 2rem;
+        font-size: 2.3rem;
 
         @media only screen and (max-width: 950px) {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
         }
     }
 
@@ -255,9 +271,24 @@
     position: relative;
     top: 4rem;
     left: 90%;
+
+    @media only screen and (max-width: 70rem) {
+        left: 80%;
+    }
 }
 
 body.nave-opened {
     height: 100vh;
     overflow-y: hidden;
+}
+
+.sidebar__contact {
+    margin-top: 2rem;
+    p {
+        font-size: 1.4rem;
+    }
+}
+
+.sidebar__social {
+  margin-top: 20rem;
 }
