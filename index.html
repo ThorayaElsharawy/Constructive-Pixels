@@ -631,8 +631,8 @@
         $(function () {
             $(document).scroll(function () {
                 var $nav = $(".navbar");
-                var $header = $(".header__title");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $header.height());
+                // var $header = $(".header");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
             });
 
             $('#navi-toggle').on('click', function(){
